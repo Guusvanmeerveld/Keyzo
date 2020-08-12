@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "ndb": "ndb ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "custom-electron-titlebar": "^3.2.3",
+    "electron": "^9.1.1",
+    "electron-json-storage": "^4.2.0",
+    "ndb": "^1.1.5",
+    "update-electron-app": "^1.5.0"
+  }
+}

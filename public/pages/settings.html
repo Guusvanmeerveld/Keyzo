@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/material-switches.css">
+</head>
+<body>
+    <div class="container pt-3 h-100">
+        <h1>Settings</h1>
+        <hr class="dark">
+        <h5 class="bold text-muted">ACCOUNT SETTINGS</h5>
+        <hr class="dark">
+        <h5 class="bold text-muted">PROFILES</h5>
+        <hr class="dark">
+        <h5 class="bold text-muted">SYSTEM</h5>
+        <h4>
+            Start up with the system
+            <span class="material-switch">
+                <input type="checkbox" id="autostart" class="form-check-label" name="autostart" value="true">
+                <label for="autostart" class="label-primary ml-3"></label>
+            </span>
+        </h4>
+        <span class="text-muted">MasterKey will start together with the rest of your system.</span>
+        <br>
+        <br>
+        <h4>
+            Minimize when closed 
+            <span class="material-switch" id="minimize-label">
+                <input type="checkbox" id="minimize" class="form-check-label" name="minimize" value="true">
+                <label for="minimize" class="label-primary ml-3"></label>
+            </span>
+        </h4>
+        <span class="text-muted">Leave MasterKey running in the background when you press X.</span>
+    </div>
+    <script src="../javascripts/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+::-webkit-scrollbar {
+    background-color: #1d1e1e;
+    color: #c3c1bd;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2b2c2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #333536;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3e4041;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1a;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    height: 100vh;
+    background-color: #212121;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype')
+}
+
+* {
+    color: #efefef!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: rgb(76, 172, 252)!important;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.dark {
+    background-color: #333333;
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype')
+}
+
+.bold {
+    font-family: 'Roboto Bold'
+}
