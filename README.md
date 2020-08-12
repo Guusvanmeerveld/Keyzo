@@ -1,12 +1,12 @@
-# MasterKey
+# Keyzo
 
-MasterKey is a helpful desktop application for Windows, Linux and MacOS that allows you to set all kinds of different keybinds to specific actions.
+Keyzo is a helpful desktop application for Windows, Linux and MacOS that allows you to set all kinds of different keybinds to specific actions.
 
 ## Built With
 
 * [Bootstrap](https://getbootstrap.com) - CSS framework that was used
 * [NodeJS](https://nodejs.org/) - Making it all work
-* [Electron](https://electronjs.org/) - Turning MasterKey into a desktop application
+* [Electron](https://electronjs.org/) - Turning Keyzo into a desktop application
 
 ## Authors
 

@@ -1,10 +1,9 @@
-const { app, BrowserWindow, globalShortcut, shell } = require('electron');
-const { autoUpdater, dialog } = require('electron')
+const { app, BrowserWindow, globalShortcut, shell, autoUpdater, dialog } = require('electron');
 const AutoLaunch = require('auto-launch');
 
 var autoLaunch = new AutoLaunch({
-    name: 'MasterKey',
-    path: '/Applications/MasterKey.app',
+    name: 'Keyzo',
+    path: '/Applications/Keyzo.app',
 });
 
 let loadingScreen;

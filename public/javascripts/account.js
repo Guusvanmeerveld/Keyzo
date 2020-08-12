@@ -1,4 +1,4 @@
-fetch("https://accounts.masterkey.com")
+fetch("https://accounts.keyzo.com")
     .then(() => {
         console.log("yeet");
     })
