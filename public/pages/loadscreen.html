@@ -24,14 +24,5 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <script>
-        const { autoUpdater, app} = require('electron');
-
-        const server = 'https://cdn.g-vm.nl'
-        const url = `${server}/update/${process.platform}/${app.getVersion()}`
-
-        autoUpdater.setFeedURL({ url })
-        autoUpdater.checkForUpdates()
-    </script>
 </body>
 </html>

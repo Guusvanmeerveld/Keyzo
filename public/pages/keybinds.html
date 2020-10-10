@@ -6,64 +6,30 @@
     <title>Keybinds</title>
     <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/icons/iconfont/material-icons.css">
     <link rel="stylesheet" href="../stylesheets/keybinds.css">
 </head>
 <body>
     <div class="container pt-3 h-100">
         <h1>
             Keybinds
-            <button class="btn btn-info float-right mt-4">Create new keybind</button>
+            <i class="material-icons float-right mt-4 add-keybind">add</i>
         </h1>
         <hr class="dark">
-        <div class="card-dark">
-            <div class="row p-3">
-                <div class="action col">
-                    <span class="bold text-muted">ACTION</span>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <select name="" id="" class="form-control bg-dark border-0">
-                                <option value="">Category</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select name="" id="" class="form-control bg-dark border-0">
-                                <option value="">Action</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="keybind col">
-                    <span class="bold text-muted">KEYBIND</span>
-                    <input type="text" readonly value="Unset, click to set" class="keybind-input form-control bg-dark border-0 mt-2">
-                </div>
+        <div class="dark-overlay position-absolute w-100 h-100 justify-content-center align-items-center" style="display: none;">
+            <div class="select-function" style="display: none;">
+                <nav>
+                    <div class="nav-item"></div>
+                </nav>
             </div>
-        </div>
-        <hr class="dark">
-        <div class="card-dark">
-            <div class="row p-3">
-                <div class="action col">
-                    <span class="bold text-muted">ACTION</span>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <select name="" id="" class="form-control bg-dark border-0">
-                                <option value="">Category</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <select name="" id="" class="form-control bg-dark border-0">
-                                <option value="">Action</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="keybind col">
-                    <span class="bold text-muted">KEYBIND</span>
-                    <input type="text" readonly value="Unset, click to set"
-                        class="keybind-input form-control bg-dark border-0 mt-2">
-                </div>
+            <input type="text" readonly class="keybind-input border-0 keybind-input text-center" placeholder="Recording keys">
+            <div class="btn-container position-absolute">
+                <a href="#" class="cancel-btn mr-3 text-muted">Cancel</a>
+                <button class="btn btn-info done-btn">Next</button>
             </div>
         </div>
     </div>
+    
     <script src="../javascripts/keybinds.js"></script>
 </body>
 </html>

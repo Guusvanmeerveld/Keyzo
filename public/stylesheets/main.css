@@ -16,11 +16,11 @@
 }
 
 html {
-    min-height: 100vh;
+    min-height: calc(100vh - 30px);
 }
 
 body {
-    height: 100vh;
+    height: calc(100vh - 30px);
     background-color: #212121;
 }
 

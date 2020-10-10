@@ -1,12 +1,18 @@
-fetch("https://accounts.keyzo.com")
+const Store = require('electron-store');
+const store = new Store();
+
+const $ = require("../javascripts/jquery.min.js")
+
+fetch("https://google.com")
     .then(() => {
-        console.log("yeet");
+        $('#content').show().addClass("d-flex");
+        if (!store.get("logged-in")) {
+            console.log("Not logged in");
+        }
     })
     .catch(() => {
-        document.getElementById('error').classList.remove('d-none')
-        document.getElementById('error').classList.add('d-flex')
+        $('#error').show().addClass("d-flex");
     })
     .finally(() => {
-        document.getElementById('loader').classList.add('d-none')
-        document.getElementById('loader').classList.remove('d-flex')
-    })
+        $('#loader').hide().removeClass("d-flex");
+    });

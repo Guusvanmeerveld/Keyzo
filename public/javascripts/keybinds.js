@@ -1,28 +1,59 @@
-document.querySelectorAll('.keybind-input').forEach(x => {
-    x.addEventListener('click', e => {
-        document.addEventListener('keyup', keyup)
-        document.addEventListener('keydown', keydown)
-        setTimeout(() => document.addEventListener('click', submit), 10)
-    })
-    function keydown(f) {
-        var key = f.key.toUpperCase()
-        if (x.id) {
-            x.value = key
-            x.removeAttribute('id')
-        }
-        if (x.value.indexOf(key) < 0) {
-            x.value += " + " + key
-        }
-    }
-    function keyup(f) {
-        var key = f.key.toUpperCase()
-        if (x.value.indexOf(key) > -1) {
-            x.id = true
-        }
-    }
-    function submit() {
-        document.removeEventListener('keyup', keyup)
-        document.removeEventListener('keydown', keydown)
-        document.removeEventListener('click', submit)
-    }
+const $ = require("../javascripts/jquery.min.js");
+
+var keys = {};
+var index;
+
+$("input[type=text]").on("keyup", e => {
+    keys[e.key.toUpperCase()] = false;
+    setInput();
+});
+
+$("input[type=text]").on("keydown", e => {
+    Object.keys(keys).forEach(g => {
+        if (!keys[g])
+            delete keys[g];
+    });
+    keys[e.key.toUpperCase()] = true;
+    setInput();
+});
+
+function setInput() {
+    $(".keybind-input").val(Object.keys(keys).toString().replace(/,/gi, " + "));
+}
+
+$(".add-keybind").click(() => {
+    index = 0;
+    resetKeyAdder();
+    $(".dark-overlay").show().addClass("d-flex");
+    $(".keybind-input").focus();
+});
+
+$(".cancel-btn").click(() => {
+    $(".dark-overlay").hide().removeClass("d-flex");
+    resetKeyAdder()
 })
+
+$(".done-btn").click(() => {
+    switch (index) {
+        case 0:
+            $(".keybind-input").hide();
+            $(".select-function").show();
+            $(".done-btn").html("Done");
+            break;
+        case 1:
+            $(".dark-overlay").hide().removeClass("d-flex");
+            resetKeyAdder();
+
+            
+            break;
+        default:
+            break;
+    }
+    index++;
+})
+
+function resetKeyAdder() {
+    $(".keybind-input").show().prop("value", "");
+    $(".select-function").hide();
+    $(".done-btn").html("Next");
+}

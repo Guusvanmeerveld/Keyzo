@@ -11,9 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "auto-launch": "^5.0.5",
-    "custom-electron-titlebar": "^3.2.3",
-    "electron": "^9.1.1",
+    "custom-electron-titlebar": "^3.2.4",
+    "electron": "^9.3.2",
     "electron-json-storage": "^4.2.0",
+    "electron-localshortcut": "^3.2.1",
+    "electron-storage": "^1.0.7",
+    "electron-store": "^6.0.1",
+    "electron-window-state": "^5.0.3",
+    "material-design-icons": "^3.0.1",
     "ndb": "^1.1.5",
     "update-electron-app": "^1.5.0"
   }

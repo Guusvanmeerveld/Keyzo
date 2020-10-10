@@ -1,6 +1,36 @@
-const { storage } = require('electron-json-storage');
+const Store = require('electron-store');
+const store = new Store();
 
-document.getElementById("minimize-label").addEventListener('click', e => {
-    storage.set('settings', { minimize: document.getElementById("minimize").checked })
-    document.getElementById("minimize-label").innerHTML = storage.get('settings');
-})
+const $ = require("../javascripts/jquery.min.js");
+
+const settings = [
+    "minimize",
+    "startup",
+    "startup-min"
+]
+
+settings.forEach(setting => {
+    $(`#${setting}-label`).click(() => {
+        let checked = $(`#${setting}`).prop("checked");
+        store.set(setting, checked);
+
+        if (setting == "startup") {
+            disabledArea();
+        }
+    });
+
+    $(`#${setting}`).prop("checked", store.get(setting));
+});
+
+function disabledArea() {
+    if (store.get('startup')) {
+        $(".startup-min").removeClass("disabled-item");
+    }
+    else {
+        $(".startup-min").addClass("disabled-item");
+        $("#startup-min").prop("checked", false);
+        store.set("startup-min", false);
+    }
+}
+
+disabledArea();

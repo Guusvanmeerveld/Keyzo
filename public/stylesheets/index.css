@@ -7,11 +7,12 @@
 #main-page {
     width: 100%;
     height: 100%;
+    border: 0;
 }
 
 .nav-left {
+    user-select: none; 
     background-color: #292929;
-    position: absolute;
 }
 
 @media (max-width:749px) {
@@ -42,22 +43,27 @@
 
 @media (min-width:750px) {
     .wrapper {
-        min-width: calc(100vw - 10rem);
-        width: 85vw;
-        max-width: calc(100vw - 6rem);
+        min-width: calc(100vw - 6rem);
+        width: 96vw;
+        max-width: calc(100vw - 3.5rem);
     }
 
     .nav-left {
         top: 0;
         height: calc(100vh - 30px);
-        min-width: 6rem;
-        width: 15vw;
-        max-width: 10rem;
+        min-width: 3.5rem;
+        width: 4vw;
+        max-width: 6rem;
     }
 
-    li.active {
-        border-left: 3px solid #efefef;
-        padding-left: -3px;
+    .nav-item:hover {
+        border-left: #a6a6a6 3px solid;
+        padding-right: 3px;
+    }
+
+    .nav-item.active {
+        border-left: 3px solid #efefef!important;
+        padding-right: 3px;
     }
 
     .nav-list-top {
@@ -83,4 +89,8 @@
 .nav-list li {
     float: left;
     cursor: pointer;
+}
+
+.nav-list li i {
+    font-size: 2rem;
 }
