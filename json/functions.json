@@ -1,0 +1,16 @@
+{
+    "Applications": {
+        "description": "Open/Close/Modify your applications",
+        "openApp": {},
+        "closeApp": {}
+    },
+    "System": {
+        "description": "Interact with your system"
+    },
+    "Keys": {
+        "description": "Output keyboard inputs"
+    },
+    "System Functions": {
+        "description": "Some predefined functions"
+    }
+}

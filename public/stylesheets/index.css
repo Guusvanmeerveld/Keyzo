@@ -1,96 +1,96 @@
 .wrapper {
-    position: absolute;
-    height: calc(100vh - 30px);
-    right: 0;
+  position: absolute;
+  height: calc(100vh - 30px);
+  right: 0;
+  border-radius: 5px 0 0 0;
 }
 
 #main-page {
-    width: 100%;
-    height: 100%;
-    border: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .nav-left {
-    user-select: none; 
-    background-color: #292929;
+  user-select: none;
+  background-color: #292929;
 }
 
-@media (max-width:749px) {
-    .nav-left {
-        width: 100vw;
-        bottom: 0;
-        height: 5rem;
-    }
+@media (max-width: 749px) {
+  .nav-left {
+    width: 100vw;
+    bottom: 0;
+    height: 5rem;
+  }
 
-    .nav-list li {
-        margin-right: 2rem;
-        margin-bottom: 1rem;
-    }
+  .nav-list li {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
 
-    .nav-list-top {
-        left: 2rem;
-    }
+  .nav-list-top {
+    left: 2rem;
+  }
 
-    .nav-list-bottom {
-        right: 2rem;
-    }
+  .nav-list-bottom {
+    right: 2rem;
+  }
 
-    .wrapper {
-        width: 100vw;
-        height: calc(100vh - 7.5rem);
-    }
+  .wrapper {
+    width: 100vw;
+    height: calc(100vh - 7.5rem);
+  }
 }
 
-@media (min-width:750px) {
-    .wrapper {
-        min-width: calc(100vw - 6rem);
-        width: 96vw;
-        max-width: calc(100vw - 3.5rem);
-    }
+@media (min-width: 750px) {
+  .wrapper {
+    min-width: calc(100vw - 6rem);
+    width: 96vw;
+    max-width: calc(100vw - 3.5rem);
+  }
 
-    .nav-left {
-        top: 0;
-        height: calc(100vh - 30px);
-        min-width: 3.5rem;
-        width: 4vw;
-        max-width: 6rem;
-    }
+  .nav-left {
+    top: 0;
+    height: calc(100vh - 30px);
+    min-width: 3.5rem;
+    width: 4vw;
+    max-width: 6rem;
+  }
 
-    .nav-item:hover {
-        border-left: #a6a6a6 3px solid;
-        padding-right: 3px;
-    }
+  .nav-item:hover {
+    border-left: #a6a6a6 3px solid;
+    padding-right: 3px;
+  }
 
-    .nav-item.active {
-        border-left: 3px solid #efefef!important;
-        padding-right: 3px;
-    }
+  .nav-item.active {
+    border-left: 3px solid #efefef !important;
+    padding-right: 3px;
+  }
 
-    .nav-list-top {
-        top: 2rem;
-    }
+  .nav-list-top {
+    top: 2rem;
+  }
 
-    .nav-list li {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
+  .nav-list li {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
-    .nav-list {
-        width: 100%;
-    }
+  .nav-list {
+    width: 100%;
+  }
 }
-
 
 .nav-list {
-    list-style-type: none;
-    bottom: 0;
+  list-style-type: none;
+  bottom: 0;
 }
 
 .nav-list li {
-    float: left;
-    cursor: pointer;
+  float: left;
+  cursor: pointer;
 }
 
 .nav-list li i {
-    font-size: 2rem;
+  font-size: 2rem;
 }
