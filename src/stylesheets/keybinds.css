@@ -19,6 +19,7 @@
 }
 
 .keybind-input {
+  border: 0;
   background-color: transparent;
   color: white;
   height: 100%;
@@ -42,7 +43,14 @@ input {
 }
 
 /* Customize functions */
+.keybind-notify {
+  margin: 0;
+  bottom: 0.5rem;
+  z-index: 1001;
+}
+
 .customize {
+  position: relative;
   width: 75%;
   height: 75%;
   background-color: #292929;
@@ -52,6 +60,12 @@ input {
 .custom-function {
   height: calc(100% - 2rem);
   margin: 1rem 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.custom-function::-webkit-scrollbar {
+  display: none;
 }
 
 .right-border {

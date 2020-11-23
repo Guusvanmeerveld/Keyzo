@@ -17,13 +17,19 @@
         </h1>
         <hr class="dark">
         <div class="dark-overlay position-absolute w-100 h-100 justify-content-center align-items-center" style="display: none;">
-            <div class="customize" style="display: none;">
+            <div class="customize container-fluid" style="display: none;">
+                <div class="keybind-notify position-absolute">
+                    <p class="show-keybind bold d-inline">
+                        
+                    </p>
+                    <button class="change-btn btn btn-info ml-3">Change</button>
+                </div>
                 <div class="row h-100">
                     <div class="select-category right-border custom-function col-md-4">
                         <h4 class="bold text-muted mb-3 text-center">CATEGORIES</h4>
     
                     </div>
-                    <div class="select-function right-border custom-function col-md-4" style="display: none;">
+                    <div class="select-function right-border custom-function col-md-4" style="display: none;"> 
                         <h4 class="bold text-muted mb-3 text-center">FUNCTIONS</h4>
                     </div>
                     <div class="select-sub-function custom-function col-md-4" style="display: none;">
@@ -31,10 +37,10 @@
                     </div>
                 </div>
             </div>
-            <input type="text" readonly class="keybind-input border-0 keybind-input text-center" placeholder="Recording keys">
+            <input class="keybind-input text-center" placeholder="Recording keys" readonly>
             <div class="btn-container position-absolute">
                 <a href="#" class="cancel-btn mr-3 text-muted">Cancel</a>
-                <button class="btn btn-info done-btn">Next</button>
+                <button class="btn btn-info done-btn" style="display: none;"></button>
             </div>
         </div>
     </div>

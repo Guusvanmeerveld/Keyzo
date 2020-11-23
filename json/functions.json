@@ -1,8 +1,12 @@
 {
     "Applications": {
         "description": "Open/Close/Modify your applications",
-        "openApp": {},
-        "closeApp": {}
+        "open app": {
+            "description": "Open an application"
+        },
+        "close app": {
+            "description": "Close an application"
+        }
     },
     "System": {
         "description": "Interact with your system"

@@ -30,21 +30,20 @@ function createLoadingScreen() {
     width: 200,
     height: 400,
     frame: false,
-    icon: "public/icon/icon.png",
+    icon: "src/icon/icon.png",
     backgroundColor: "#212121",
   });
 
   loadingScreen.setResizable(false);
   loadingScreen.on("closed", () => (loadingScreen = null));
-  loadingScreen.loadFile("public/pages/loadscreen.html");
+  loadingScreen.loadFile("src/pages/loadscreen.html");
 }
 
-function createWindow() {
+async function createWindow() {
   let win = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
       webviewTag: true,
-      // enableBlinkFeatures: false,
       enableRemoteModule: true,
     },
     frame: false,
@@ -53,11 +52,11 @@ function createWindow() {
     backgroundColor: "#212121",
     minWidth: 600,
     minHeight: 600,
-    icon: "public/icon/icon.png",
+    icon: "src/icon/icon.png",
   });
 
   // autoUpdater.checkForUpdates()
-  win.loadFile("public/index.html");
+  win.loadFile("src/index.html");
 
   win.webContents.on("new-window", function (e, url) {
     e.preventDefault();
@@ -66,8 +65,8 @@ function createWindow() {
 
   electronLocalshortcut.register(win, "Ctrl+R", () => {
     win.reload();
-    // app.relaunch()
-    // app.exit()
+    // app.relaunch();
+    // app.exit();
   });
 
   electronLocalshortcut.register(win, "Ctrl+Shift+I", () => {
@@ -83,10 +82,11 @@ function createWindow() {
     }
   });
 
-  win.once("ready-to-show", () => {
+  win.webContents.on("dom-ready", () => {
     if (loadingScreen) {
       loadingScreen.close();
     }
+    win.maximize();
     win.show();
   });
 }
