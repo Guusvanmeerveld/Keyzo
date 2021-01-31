@@ -6,6 +6,10 @@ const {
   autoUpdater,
 } = require("electron");
 
+const path = app.getAppPath();
+
+const info = require(path + "/json/app.json");
+
 const electronLocalshortcut = require("electron-localshortcut");
 const Store = require("electron-store");
 const store = new Store();
@@ -100,7 +104,7 @@ app.on("ready", () => {
   }
 
   let autoLaunch = new AutoLaunch({
-    name: "Keyzo",
+    name: info.name,
     path: app.getPath("exe"),
   });
 

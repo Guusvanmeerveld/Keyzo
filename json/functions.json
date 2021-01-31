@@ -1,20 +1,42 @@
-{
-    "Applications": {
+[
+    {
+        "title": "applications",
         "description": "Open/Close/Modify your applications",
-        "open app": {
-            "description": "Open an application"
-        },
-        "close app": {
-            "description": "Close an application"
-        }
+        "children": [
+            {
+                "title": "open app",
+                "description": "Open an application",
+                "children": [
+                    {
+                        "title": "test"
+                    },
+                    {
+                        "title": "lksfjslkd"
+                    }
+                ]
+            }
+        ]
     },
-    "System": {
+    {
+        "title": "system",
+        "description": "Open/Close/Modify your applications",
+        "children": [
+            {
+                "title": "yeetapp",
+                "children": [
+                    {
+                        "title": "lksfjslkd"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "system functions",
         "description": "Interact with your system"
     },
-    "Keys": {
+    {
+        "title": "keys",
         "description": "Output keyboard inputs"
-    },
-    "System Functions": {
-        "description": "Some predefined functions"
     }
-}
+]

@@ -1,7 +1,9 @@
 const Store = require("electron-store");
 const store = new Store();
 
-const $ = require("./jquery.min.js");
+const path = require("electron").remote.app.getAppPath();
+
+const $ = require(path + "/src/javascripts/jquery.min.js");
 
 const settings = ["minimize", "startup", "startup-min"];
 
